@@ -1,3 +1,5 @@
+/* MAIN CONTENT */
+
 body {
   background: url('../static/back.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -12,7 +14,6 @@ body {
     background-color: rgba(255,255,255,0.6);
   }
 }
-
 
 
 /* make sidebar nav vertical */ 
@@ -59,10 +60,21 @@ body {
 .main-content {
   padding: 12px;
   background-color: rgba(0,0,0,0.4);
-  /*height: 500px;*/
   max-height: 40em;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.separator-top, .separator {
+  padding: 20px 0px;
+}
+
+.separator-top {
+
+}
+
+.separator {
+  border-top: 2px solid #1A1A1A;
 }
 
 
