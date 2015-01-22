@@ -91,6 +91,7 @@ body {
     display: flex;
 	font-size: 25px;
   }
+  
   .sidebar-nav .navbar li a, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     padding-top: 0px;
 	padding-bottom: 5px;
@@ -99,27 +100,29 @@ body {
 	line-height: 26px;
 	height: 38px;
   }
-  
-  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-	background-color: inherit;
-	
-	}
-	
-  .navbar-default .navbar-nav>.active>a:after {
+  	
+  .sidebar-nav .navbar li a:after {
 	content: '';
 	display: block;
 	height: 2px;
 	width: 0;
 	transition: width .5s ease, background-color .5s ease;
   }
+  
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	background-color: inherit;
 	
-  .navbar-default .navbar-nav>.active>a:hover:after {
-	width: 100%;
-	background: white;
   }
 	
-  
-  
+  .navbar-default .navbar-nav>.active>a:after {
+	content: '';
+	display: block;
+	height: 2px;
+	width: 100%;
+	transition: width .5s ease, background-color .5s ease;
+	background: white;
+  }
+
   .navbar-default,  .navbar-default:hover,  .navbar-default:focus, .navbar-default .navbar-nav>.active>a {
     background-color: rgba(0,0,0,0);
 	border-color: transparent;
