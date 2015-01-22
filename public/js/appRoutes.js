@@ -6,26 +6,31 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
 		// home page
 		.when('/', {
-			title: 'Van Nguyen | Home',
+			title: 'Home',
 			templateUrl: 'views/home.html',
 			controller: 'MainController'
 		})
 
 		.when('/resume', {
-			title: 'Van Nguyen | Resume',
+			title: 'Resume',
 			templateUrl: 'views/resume.html',
 			controller: 'ResumeController'
 		})
 		
 		.when('/projects', {
-			title: 'Van Nguyen | Projects',
+			title: 'Projects',
 			templateUrl: 'views/projects.html',
 			controller: 'ProjectController'	
 		})
 		
+		.when('/photography', {
+			title: 'Photography',
+			templateUrl: 'views/photography.html',
+			controller: 'PhotographyController'
+		})
 		
 		.when('/contact', {
-			title: 'Van Nguyen | Contact',
+			title: 'Contact',
 			templateUrl: 'views/contact.html',
 			controller: 'ContactController'
 		});
