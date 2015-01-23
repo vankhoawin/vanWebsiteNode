@@ -126,14 +126,6 @@ body {
   }
 }
 
-.main-content {
-  padding: 12px;
-  background-color: rgba(0,0,0,0.5);
-  max-height: 40em;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
@@ -153,16 +145,37 @@ body {
  animation-duration:0.2s;
 }
 
-.separator-top, .separator {
-  padding: 20px 0px;
+.main-content {
+  padding: 12px;
+  background-color: rgba(0,0,0,0.5);
+  max-height: 40em;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
-.separator-top {
 
+.separator-top, .separator {
+  padding: 20px 0px;
+  height: 270px;
+}
+
+.separator-top div a, .separator div a {
+  color: white;
+  font-weight: bold;
+  font-size:18px;
+}
+
+.separator-top div p , .separator div p {
+  margin-top: 8px;
 }
 
 .separator {
   border-top: 1px solid rgba(255,255,255,0.6);
+}
+
+.separator-top a, .separator-top a img,  
+.separator a, .separator a img {
+  height:100%;
 }
 
 input, textarea, button {
