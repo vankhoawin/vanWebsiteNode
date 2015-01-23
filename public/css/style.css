@@ -1,16 +1,14 @@
+/*---------------------------------------------
+  FONT AWESOME 
+  -------------------------------------------*/
 
-/* Font Awesome */
-
-/* FONT PATH
- * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.woff?v=3.2.1') format('woff');
   font-weight: normal;
   font-style: normal;
 }
-/* FONT AWESOME CORE
- * -------------------------- */
+
 [class^="icon-"],
 [class*=" icon-"] {
   font-family: FontAwesome;
@@ -20,6 +18,7 @@
   -webkit-font-smoothing: antialiased;
   *margin-right: .3em;
 }
+
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
   text-decoration: none;
@@ -37,7 +36,6 @@
   
 }
 
-
 .icon-github:before {
   content: "\f092";
 }
@@ -48,7 +46,10 @@
   content: "\f16d";
 }
 
-/* MAIN CONTENT */
+
+/*---------------------------------------------
+  MAIN CONTENT 
+  -------------------------------------------*/
 
 body {
   background: url('../static/back.jpg') no-repeat center center fixed; 
@@ -59,84 +60,98 @@ body {
   color: white;
 }
 
-
-
-
-
 @media (max-width: 767px) {
-   .navbar-default{
+  .navbar-default{
     background-color: rgba(255,255,255,0.6);
   }
 }
 
-
-/* make sidebar nav vertical */ 
 @media (min-width: 768px) {
   .container {
-	margin-top: 80px;
+    margin-top: 80px;
   }
   
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
   }
+
   .sidebar-nav .navbar ul {
     float: none;
   }
+
   .sidebar-nav .navbar ul:not {
     display: block;
   }
+
   .sidebar-nav .navbar li {
     float: none;
     display: flex;
-	font-size: 25px;
+    font-size: 25px;
   }
   
   .sidebar-nav .navbar li a, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
     padding-top: 0px;
-	padding-bottom: 5px;
-	margin-right: 20px;
-	color: white !important;
-	line-height: 26px;
-	height: 38px;
+  	padding-bottom: 5px;
+  	margin-right: 20px;
+  	color: white !important;
+  	line-height: 26px;
+  	height: 38px;
   }
   	
   .sidebar-nav .navbar li a:after {
-	content: '';
-	display: block;
-	height: 2px;
-	width: 0;
-	transition: width .5s ease, background-color .5s ease;
+  	content: '';
+  	display: block;
+  	height: 2px;
+  	width: 0;
+  	transition: width .5s ease, background-color .5s ease;
   }
   
   .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
-	background-color: inherit;
-	
+    background-color: inherit;
   }
 	
   .navbar-default .navbar-nav>.active>a:after {
-	content: '';
-	display: block;
-	height: 2px;
-	width: 100%;
-	transition: width .5s ease, background-color .5s ease;
-	background: white;
+  	content: '';
+  	display: block;
+  	height: 2px;
+  	width: 101%;
+  	transition: width .5s ease, background-color .5s ease;
+  	background: white;
   }
 
   .navbar-default,  .navbar-default:hover,  .navbar-default:focus, .navbar-default .navbar-nav>.active>a {
     background-color: rgba(0,0,0,0);
-	border-color: transparent;
+    border-color: transparent;
   }
 }
 
 .main-content {
   padding: 12px;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.5);
   max-height: 40em;
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in{
+  opacity:0;  /* make things invisible upon start */
+ -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+ -moz-animation:fadeIn ease-in 1;
+ animation:fadeIn ease-in 1;
+ 
+ -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+ -moz-animation-fill-mode:forwards;
+ animation-fill-mode:forwards;
+ 
+ -webkit-animation-duration:0.2s;
+ -moz-animation-duration:0.2s;
+ animation-duration:0.2s;
+}
 
 .separator-top, .separator {
   padding: 20px 0px;
@@ -150,7 +165,6 @@ body {
   border-top: 1px solid rgba(255,255,255,0.6);
 }
 
-
 input, textarea, button {
   border-radius: 0 !important;
   border: 0 !important;
@@ -161,21 +175,66 @@ input, textarea, button {
   padding: 0em 0.2em;
 }
 
+.main-content h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
 
-::-webkit-scrollbar {
-    width: 12px;
+.main-content h5 {
+  margin-bottom: 35px;
+}
+
+.work-history div {
+  margin-bottom: 25px;
+}
+
+.work-history div h4 {
+  color: #b3d4fc;
+
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.work-history div h4 span {
+  color: white;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.work-history div h5 {
+  font-size: 16px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.work-history div ul {
+  font-size: 14px;
+  padding-left: 30px;
+  font-weight: normal;
+}
+
+.work-history div ul li {
+  margin-bottom: 5px;
 }
  
-/* Scrollbar CSS */
+/*---------------------------------------------
+  SCROLLBAR
+  -------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
  
 ::-webkit-scrollbar-track {
-    /*-webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.3); */
+  /*-webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.3); */
 }
  
 ::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.6); 
-    -webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.5); 
+  background: rgba(0,0,0,0.6); 
+  -webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.5); 
 }
+
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(255,255,255,0.4); 
 }
