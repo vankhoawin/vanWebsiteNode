@@ -25,17 +25,6 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <!-- <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
-  <!-- ANGULAR -->
-  <script src="js/controllers/MainCtrl.js"></script>
-  <script src="js/controllers/TitleCtrl.js"></script>
-  <script src="js/controllers/ResumeCtrl.js"></script>
-  <script src="js/controllers/ProjectCtrl.js"></script>
-  <script src="js/controllers/PhotographyCtrl.js"></script>
-  <script src="js/controllers/ContactCtrl.js"></script>
-  <script src="js/services/ProjectService.js"></script>
-  <script src="js/services/ContactService.js"></script>
-  <script src="js/appRoutes.js"></script>
-  <script src="js/app.js"></script>
 </head>
 
 <body ng-controller="MainController">
@@ -68,8 +57,20 @@
     </div>
 
     <!-- ANGULAR DYNAMIC CONTENT -->
-    <div class="col-sm-8 col-md-9 main-content fade-in" ng-view>"></div>
-
+    <div class="col-sm-8 col-md-9 main-content fade-in" id="transparency" ng-view></div>
+ 
   </div>
 </body>
+  <!-- ANGULAR -->
+  <script src="js/controllers/MainCtrl.js"></script>
+  <script src="js/controllers/TitleCtrl.js"></script>
+  <script src="js/controllers/ResumeCtrl.js"></script>
+  <script src="js/controllers/ProjectCtrl.js"></script>
+  <script src="js/controllers/PhotographyCtrl.js"></script>
+  <script src="js/controllers/ContactCtrl.js"></script>
+  <script src="js/services/ProjectService.js"></script>
+  <script src="js/services/ContactService.js"></script>
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/slideshow.js"></script>
 </html>

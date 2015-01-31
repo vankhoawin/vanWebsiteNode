@@ -1,2 +1,2 @@
 Van Nguyen
-personal website #3. MEAN stack
+personal website #3. Node.js, AngularJS and ExpressJS
