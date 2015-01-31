@@ -66,6 +66,8 @@ body {
   }
 }
 
+
+
 @media (max-width: 767px) {
   .navbar-default{
     background-color: rgba(255,255,255,0.6);
@@ -75,7 +77,7 @@ body {
 
 @media (max-width: 991px) {
   .separator {
-    margin: 180px 0px !important;
+    margin: 190px 0px !important;
   }
 
   .separator-top a, .separator-top a img,  
@@ -271,7 +273,7 @@ input, textarea, button {
   -------------------------------------------*/
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar * {
