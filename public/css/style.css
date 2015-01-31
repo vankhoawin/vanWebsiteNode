@@ -72,6 +72,23 @@ body {
   }
 }
 
+
+@media (max-width: 991px) {
+  .separator {
+    margin: 180px 0px !important;
+  }
+
+  .separator-top a, .separator-top a img,  
+  .separator a, .separator a img,
+  .separator-top div a, .separator div a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+}
+
 @media (min-width: 768px) {
   .container {
     margin-top: 80px;
@@ -165,6 +182,20 @@ body {
   overflow-x: hidden;
 }
 
+.main-content h4 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.main-content h5 {
+  margin-bottom: 35px;
+}
+/*
+.sep {
+  padding: 80px 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+}
+*/
 
 .separator-top, .separator {
   padding: 20px 0px;
@@ -200,14 +231,6 @@ input, textarea, button {
   padding: 0em 0.2em;
 }
 
-.main-content h4 {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.main-content h5 {
-  margin-bottom: 35px;
-}
 
 .work-history div {
   margin-bottom: 25px;
@@ -252,7 +275,7 @@ input, textarea, button {
 }
 
 ::-webkit-scrollbar * {
-  background: transparent; // manage scrollbar background color here
+  background: transparent;
 }
 
 
