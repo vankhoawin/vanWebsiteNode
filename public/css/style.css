@@ -278,6 +278,13 @@ input, textarea, button {
 .work-history div ul li {
   margin-bottom: 5px;
 }
+
+
+#photography{
+  height:220px;
+  width: 300px;
+  overflow: hidden;
+}
  
 /*---------------------------------------------
   SCROLLBAR

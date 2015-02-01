@@ -1,6 +1,17 @@
-<div class="separator-top">
-	photography test
+<div ng-repeat="album in albums">
+	<div class="separator-top" ng-if="$first">
+	  <a class="col-xs-12 col-md-6 col-lg-5" href="#"><img id="photography" src="{{ album.thumbnail }}"></img></a>
+	  <div class="col-xs-12 col-md-6 col-lg-7">
+	  	<a href="#">{{ album.title._content }}</a>
+	  	<p>{{ album.description._content }}</p>
+	  </div>
+	</div>
+	<div class="separator" ng-if="!$first">
+	  <a class="col-xs-12 col-md-6 col-lg-5" href="#"><img id="photography" src="{{ album.thumbnail }}"></img></a>
+	  <div class="col-xs-12 col-md-6 col-lg-7">
+	  	<a href="#">{{ album.title._content }}</a>
+	  	<p>{{ album.description._content }}</p>
+	  </div>
+	</div>
 </div>
-<div class="separator">
-	test
-</div>
+<button ng-click="getAlbums(5, getAlbum)">sdfsdf</button>
