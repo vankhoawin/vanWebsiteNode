@@ -4,7 +4,6 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 
 	$routeProvider
 
-		// home page
 		.when('/', {
 			title: 'Home',
 			templateUrl: 'views/home.html',

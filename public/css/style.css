@@ -48,7 +48,10 @@
   -------------------------------------------*/
 
 body {
-  background: url('../static/back0.jpg') no-repeat center center fixed; 
+  background-image: url('../static/back0.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
