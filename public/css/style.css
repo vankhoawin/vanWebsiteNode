@@ -59,6 +59,9 @@ body {
   color: white;
   -webkit-transition: background-image 0.4s linear 0.3s;
   transition: background-image 0.4s linear 0.3s;
+  overflow-x:hidden;
+  overflow-y:scroll;
+
 }
 
 @media (min-width: 1250px) {
@@ -294,7 +297,29 @@ input, textarea, button {
   -webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.5); 
 }
 
-body {
-overflow-x:hidden;
-      overflow-y:scroll;
-    }
+
+img.fader {
+  border-radius: 5px 5px 5px 5px ;
+  display: none ;
+  height: 400px ;
+  left: 0px ;
+  position: absolute ;
+  top: 0px ;
+  width: 400px ;
+  z-index: 2 ;
+}
+
+img.fader.show {
+  display: block ;
+  transition: opacity 250ms ease ;
+}
+
+img.fader.fadeOut {
+  opacity: 0 ;
+}
+img.image {
+  border-radius: 5px 5px 5px 5px ;
+  display: block ;
+  height: 400px ;
+  width: 400px ;
+}

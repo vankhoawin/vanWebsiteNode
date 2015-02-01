@@ -26,6 +26,7 @@
   <!-- <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
 
   <!-- ANGULAR -->
+  <script src="js/directives/slideshowDirective.js"></script>
   <script src="js/controllers/MainCtrl.js"></script>
   <script src="js/controllers/TitleCtrl.js"></script>
   <script src="js/controllers/ResumeCtrl.js"></script>
@@ -39,7 +40,7 @@
   <!-- <script src="js/slideshow.js"></script> -->
 </head>
 
-<body ng-controller="MainController">
+<body ng-controller="MainController" ng-style="{'background-image':'url({{ slideshowImage }})'}">
   <div class="container">
     <div class="row-fluid">
       <div class="col-sm-4 col-md-3">
@@ -70,7 +71,6 @@
 
     <!-- ANGULAR DYNAMIC CONTENT -->
     <div class="col-sm-8 col-md-9 main-content fade-in" id="transparency" ng-view></div>
- 
   </div>
 </body>
 </html>
