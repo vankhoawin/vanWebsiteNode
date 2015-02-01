@@ -280,11 +280,34 @@ input, textarea, button {
 }
 
 
-#photography{
-  height:220px;
+.photography-album {
+
+}
+
+.photography-album a {
+  color: #5bc0de;
+}
+
+.photography-album #grey-arrow {
+  color: #999;
+}
+
+.photography-album img {
+  height: auto;
+  width: 100%;
+}
+
+.photography-album div a {
+
+  margin-bottom: 30px;
+}
+
+#photography {
+  height:230px;
   width: 300px;
   overflow: hidden;
 }
+
  
 /*---------------------------------------------
   SCROLLBAR

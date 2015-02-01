@@ -27,7 +27,13 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 			templateUrl: 'views/photography.html',
 			controller: 'PhotographyController'
 		})
-		
+
+		.when('/photography/:albumId', {
+			title: 'Photography',
+			templateUrl: 'views/photographyAlbum.html',
+			controller: 'PhotographyAlbumController'
+		})
+
 		.when('/contact', {
 			title: 'Contact',
 			templateUrl: 'views/contact.html',

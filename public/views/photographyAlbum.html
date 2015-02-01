@@ -1,0 +1,7 @@
+<div class="photography-album">
+	<h4><a href="/photography">Photography</a><span id="grey-arrow"> / </span>{{ albumInfo.title._content }}<h4>
+	<h5>{{ albumInfo.description._content }}</h5>
+	<div ng-repeat="photo in album" >
+		<a class="col-xs-12 col-md-6 col-lg-12" target="_blank" href="https://www.flickr.com/photos/126052905@N03/{{ photo.id }}"><img id="albumPhotos" src="{{ photo.thumbnail }}"></img></a>
+	</div>
+</div>

@@ -1,17 +1,19 @@
-<div ng-repeat="album in albums">
+<h4 class="photography-album">Photo albums are loaded via Flickr API. Visit my <a target="_blank" href="https://www.flickr.com/photos/126052905@N03/">Flickr!</a></h4>
+<div ng-repeat="album in albums" >
 	<div class="separator-top" ng-if="$first">
-	  <a class="col-xs-12 col-md-6 col-lg-5" href="#"><img id="photography" src="{{ album.thumbnail }}"></img></a>
+	  <a class="col-xs-12 col-md-6 col-lg-5" href="photography/{{ album.id }}"><img id="photography" src="{{ album.thumbnail }}"></img></a>
 	  <div class="col-xs-12 col-md-6 col-lg-7">
-	  	<a href="#">{{ album.title._content }}</a>
+	  	<a href="/photography/{{ album.id }}">{{ album.title._content }}</a>
+	  	<i>{{ album.photos }} {{ album.photos == 1 ? "photo" : "photos" }}</i>
 	  	<p>{{ album.description._content }}</p>
 	  </div>
 	</div>
 	<div class="separator" ng-if="!$first">
-	  <a class="col-xs-12 col-md-6 col-lg-5" href="#"><img id="photography" src="{{ album.thumbnail }}"></img></a>
+	  <a class="col-xs-12 col-md-6 col-lg-5" href="photography/{{ album.id }}"><img id="photography" src="{{ album.thumbnail }}"></img></a>
 	  <div class="col-xs-12 col-md-6 col-lg-7">
-	  	<a href="#">{{ album.title._content }}</a>
+	  	<a href="/photography/{{ album.id }}">{{ album.title._content }}</a>
+	  	<i>{{ album.photos }} {{ album.photos == 1 ? "photo" : "photos" }}</i>
 	  	<p>{{ album.description._content }}</p>
 	  </div>
 	</div>
 </div>
-<button ng-click="getAlbums(5, getAlbum)">sdfsdf</button>
