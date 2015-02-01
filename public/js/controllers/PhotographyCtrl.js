@@ -1,5 +1,5 @@
 angular.module('PhotographyCtrl', [])
-.controller('PhotographyController', ['$scope', '$http', function($scope, $http) {
+.controller('PhotographyController', ['$scope', '$http', USER_ID, API_KEY, function($scope, $http, USER_ID, API_KEY) {
 	
 	$scope.albums = [];
 
@@ -11,7 +11,7 @@ angular.module('PhotographyCtrl', [])
 			params: {
 				method: 'flickr.photos.getSizes',
 				photo_id: photoId,
-				api_key: 'aa97f39fc7ff944178ebd92711b9ab35',
+				api_key: '',
 				text: $scope.photo,
 				format: 'json',
 				nojsoncallback: 1
@@ -43,8 +43,8 @@ angular.module('PhotographyCtrl', [])
 			url: 'https://api.flickr.com/services/rest',
 			params: {
 				method: 'flickr.photosets.getList',
-				user_id: '126052905@N03',
-				api_key: 'aa97f39fc7ff944178ebd92711b9ab35',
+				user_id: '',
+				api_key: '',
 				text: $scope.album,
 				format: 'json',
 				nojsoncallback: 1
