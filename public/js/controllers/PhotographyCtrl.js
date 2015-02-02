@@ -147,7 +147,7 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$r
 
 
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
-		$scope.getAlbumPhotos($routeParams.albumId, 7, $scope.getAlbumPhoto);
+		$scope.getAlbumPhotos($routeParams.albumId, 9, $scope.getAlbumPhoto);
 		$scope.getAlbumTitle($routeParams.albumId);
 		
 	});

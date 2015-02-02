@@ -16,6 +16,13 @@ angular.module('ProjectCtrl', []).controller('ProjectController', function($scop
 			'description' : 'Website I built for my former company to replace the old website. Runs on a LAMP stack (Python with Flask); has fully functional back-end where different users have different views depending on job description (i.e. Admin, HR). HR can input new jobs as requested, which are scraped by Indeed.com every 24 hours and put into their job listing.'
 		},
 		{
+			'title'  : 'C++ File System (2014)',
+			'image'  : '../static/projects/filesystem53.jpg',
+			'source' : '',
+			'github' : '',
+			'description' : 'Group project for ICS 53 (Principles in System Design). The file system was able to open buffers to read and write to files, character by character. Extra memory blocks were allocated dynamically when one file\'s block was filled.'
+		},
+		{
 			'title'  : 'Personal Website (2014)',
 			'image'  : '../static/projects/website2.jpg',
 			'source' : 'http://vanflaskwebsite2.herokuapp.com/',

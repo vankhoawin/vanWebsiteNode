@@ -1,6 +1,5 @@
-var myApp = angular.module('appRoutes', [])
-
-myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+angular.module('appRoutes', [])
+.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
 	$routeProvider
 

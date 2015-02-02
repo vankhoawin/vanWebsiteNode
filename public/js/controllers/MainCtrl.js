@@ -19,11 +19,24 @@ angular.module('MainCtrl', [])
 	}
 
 	$scope.isActive = function(route) {
-		if ($location.path() === '/')
-			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.0)';
-		else
-			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.5)';
-		
-		return route === $location.path();
+		// find base root of view
+		var base = $location.path().lastIndexOf("/"); 
+
+		// if not base already, change to base
+		var path = (base === 0) ? $location.path() : $location.path().substring(0, base); 
+
+		return route === path;
 	}
+
+	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
+		if ($location.path() === '/') {
+			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.0)';
+		}
+		else {
+			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.5)';
+		}
+	});
+
+
+
 }]);
