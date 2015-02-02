@@ -1,6 +1,6 @@
 var PhotographyCtrl = angular.module('PhotographyCtrl', []);
 
-PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', function($scope, $http) {
+PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchorScroll', '$location', function($scope, $http, $anchorScroll, $location) {
 	
 	$scope.albums = [];
 
@@ -60,14 +60,25 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', function
 		})
 	}
 
+	$scope.scrollTo = function(id) {
+    var old = $location.hash();
+    $location.hash(id);
+    $anchorScroll();
+    //reset to old to keep any additional routing logic from kicking in
+    $location.hash(old);
+	};
+
+
+
 
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
 		$scope.getAlbums(5, $scope.getAlbum);
+	  document.getElementById("transparency").style.backgroundColor = 'rgba(200,200,200,0.14)';
 	});
 }]);
 
 
-PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$routeParams', function($scope, $http, $routeParams) {
+PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$anchorScroll', '$location', '$routeParams', function($scope, $http, $anchorScroll, $location, $routeParams) {
 
 	$scope.album = [];
 	$scope.albumInfo = '';
@@ -146,9 +157,20 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$r
 	}
 
 
+	$scope.scrollTo = function(id) {
+    var old = $location.hash();
+    $location.hash(id);
+    $anchorScroll();
+    //reset to old to keep any additional routing logic from kicking in
+    $location.hash(old);
+	};
+
+
+
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
 		$scope.getAlbumPhotos($routeParams.albumId, 9, $scope.getAlbumPhoto);
 		$scope.getAlbumTitle($routeParams.albumId);
+	  document.getElementById("transparency").style.backgroundColor = 'rgba(200,200,200,0.14)';
 		
 	});
 

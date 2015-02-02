@@ -18,23 +18,36 @@ angular.module('MainCtrl', [])
 		document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
 	}
 
-	$scope.isActive = function(route) {
-		// find base root of view
-		var base = $location.path().lastIndexOf("/"); 
+	$scope.findBase = function(route) {
+		// find base root of view	
+		var base = route.lastIndexOf("/"); 
 
 		// if not base already, change to base
-		var path = (base === 0) ? $location.path() : $location.path().substring(0, base); 
+		var path = (base === 0) ? route : route.substring(0, base); 
+
+		return path;
+	}
+
+
+	$scope.isActive = function(route) {
+		var path = $scope.findBase($location.path());
 
 		return route === path;
 	}
 
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
-		if ($location.path() === '/') {
-			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.0)';
+		var path = $scope.findBase($location.path());
+
+		if (path === '/photography') {
+		  document.body.style.backgroundImage  = "url('../static/photoBG.jpg')";
+		  // document.body.style.backgroundRepeat = "repeat";
+		  // document.body.style.backgroundSize   = "inherit";
+		}else {
+			document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
+		  document.body.style.backgroundRepeat = "no-repeat";
+		  document.body.style.backgroundSize   = "cover";
 		}
-		else {
-			document.getElementById("transparency").style.backgroundColor = 'rgba(0,0,0,0.5)';
-		}
+
 	});
 
 

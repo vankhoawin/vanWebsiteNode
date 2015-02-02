@@ -6,7 +6,7 @@ angular.module('appRoutes', [])
 		.when('/', {
 			title: 'Home',
 			templateUrl: 'views/home.html',
-			controller: 'MainController'
+			controller: 'HomeController'
 		})
 
 		.when('/resume', {
