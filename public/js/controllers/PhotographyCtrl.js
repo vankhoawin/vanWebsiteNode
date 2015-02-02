@@ -98,7 +98,6 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
 			}
 
 		}).success(function(data) {
-			console.log(data);
 			album[key]['thumbnail'] = data.sizes.size[sizeNum-1].source;
 
 		}).error(function(error) {

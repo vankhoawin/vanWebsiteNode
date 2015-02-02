@@ -37,6 +37,12 @@ angular.module('appRoutes', [])
 			title: 'Contact',
 			templateUrl: 'views/contact.html',
 			controller: 'ContactController'
+		})
+
+		.otherwise({
+			title: '404',
+			templateUrl: 'views/404.html',
+			controller: '404Controller'
 		});
 
 		
