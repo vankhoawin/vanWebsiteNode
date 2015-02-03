@@ -184,7 +184,7 @@ body {
 
 .main-content {
   padding: 12px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.7);
   /*max-height: 40em;*/
   overflow-y: scroll;
   overflow-x: hidden;
@@ -321,9 +321,6 @@ input, textarea, button {
 }
 
  
-/*---------------------------------------------
-  SCROLLBAR
-  -------------------------------------------*/
 
 .main-content::-webkit-scrollbar {
   width: 12px;
