@@ -11,7 +11,7 @@ angular.module('ProjectCtrl', []).controller('ProjectController', function($scop
 		{
 			'title'  			: 'MHI Windpower Website (2014)',
 			'image' 			: '../static/projects/mhi.jpg',
-			'source'			: 'http://warm-mesa-2414.herokuapp.com/',
+			'source'			: '',
 			'github'			: '',
 			'description' : 'Website I built for my former company to replace the old website. Runs on a LAMP stack (Python with Flask); has fully functional back-end where different users have different views depending on job description (i.e. Admin, HR). HR can input new jobs as requested, which are scraped by Indeed.com every 24 hours and put into their job listing.'
 		},
