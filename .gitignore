@@ -14,7 +14,7 @@ pids
 *.seed
 
 # Config file
-# app/config.js
+app/config.js
 
 # Libraries
 public/libs
