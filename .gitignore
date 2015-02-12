@@ -13,6 +13,9 @@ pids
 *.pid
 *.seed
 
+# Config file
+# app/config.js
+
 # Libraries
 public/libs
 
