@@ -320,6 +320,15 @@ input, textarea, button {
   overflow: hidden;
 }
 
+.form-group .text-disable {
+    cursor: not-allowed;
+    background-color: #EEE;
+    color: #9E9999;
+}
+
+.form-control:focus {
+  box-shadow: inset 0 1px 5px rgba(0,0,0,.075),0 0 25px rgba(103,175,233,.9) !important;
+}
  
 
 .main-content::-webkit-scrollbar {
