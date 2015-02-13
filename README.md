@@ -1,5 +1,5 @@
 #VanWebsite Node
-##personal website #3. Node.js + AngularJS + ExpressJS using Flickr API
+personal website #3. Node.js + AngularJS + ExpressJS using Flickr API
 ##To Do
 - [ ] fully load pictures in slideshow before transitioning
 - [ ] lazy load flickr api pictures
