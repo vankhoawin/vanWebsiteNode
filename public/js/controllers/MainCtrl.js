@@ -43,9 +43,11 @@ angular.module('MainCtrl', [])
 		  // document.body.style.backgroundRepeat = "repeat";
 		  // document.body.style.backgroundSize   = "inherit";
 		}else {
-			document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
-		  document.body.style.backgroundRepeat = "no-repeat";
-		  document.body.style.backgroundSize   = "cover";
+
+			document.body.style.background  = 'url(../static/back' + $scope.slideshowCurr + '.jpg) center center cover no-repeat fixed';
+			// document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
+		 //  document.body.style.backgroundRepeat = "no-repeat";
+		 //  document.body.style.backgroundSize   = "cover";
 		}
 
 	});
