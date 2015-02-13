@@ -8,13 +8,11 @@ angular.module('MainCtrl', [])
 
 	$scope.decImage = function(index) {
 		$scope.slideshowCurr = ($scope.slideshowCurr <= 0) ? $scope.slideshowMax : ($scope.slideshowCurr-1);
-		// $scope.slideshowImage = '../static/back' + $scope.slideshowCurr + '.jpg'
 		document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
 	}
 
 	$scope.incImage = function(index) {
 		$scope.slideshowCurr = ($scope.slideshowCurr >= $scope.slideshowMax) ? 0 : ($scope.slideshowCurr+1);
-		// $scope.slideshowImage = '../static/back' + $scope.slideshowCurr + '.jpg'
 		document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
 	}
 
@@ -40,11 +38,7 @@ angular.module('MainCtrl', [])
 
 		if (path === '/photography') {
 		  document.body.style.backgroundImage  = "url('../static/photoBG.jpg')";
-		  // document.body.style.backgroundRepeat = "repeat";
-		  // document.body.style.backgroundSize   = "inherit";
 		}else {
-
-			// document.body.style.background  = 'url(../static/back' + $scope.slideshowCurr + '.jpg) center center cover no-repeat fixed';
 			document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
 		  document.body.style.backgroundRepeat = "no-repeat";
 		  document.body.style.backgroundSize   = "cover";
