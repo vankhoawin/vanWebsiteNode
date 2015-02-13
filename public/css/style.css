@@ -57,7 +57,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  /*background-size: cover;*/
+  background-size: 100% 100%;
   color: white;
   -webkit-transition: background-image 0.8s ease 0.1s;
   transition: background-image 0.8s ease 0.1s;
