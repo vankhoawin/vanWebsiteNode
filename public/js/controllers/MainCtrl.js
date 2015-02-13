@@ -4,7 +4,7 @@ angular.module('MainCtrl', [])
 	$scope.slideshowImage = '../static/back0.jpg'
 
 	$scope.slideshowCurr = 0;
-	$scope.slideshowMax = 13;
+	$scope.slideshowMax = 10;
 
 	$scope.decImage = function(index) {
 		$scope.slideshowCurr = ($scope.slideshowCurr <= 0) ? $scope.slideshowMax : ($scope.slideshowCurr-1);
