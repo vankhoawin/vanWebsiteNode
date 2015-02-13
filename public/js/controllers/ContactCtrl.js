@@ -24,10 +24,10 @@ angular.module('ContactCtrl', []).controller('ContactController', ['$scope', '$h
 			});
 
 
-			document.getElementById("contact-name").className += " text-disable";
-			document.getElementById("contact-address").className += " text-disable";
-			document.getElementById("contact-subject").className += " text-disable";
-			document.getElementById("contact-body").className += " text-disable";
+			document.getElementById("contact-name").disabled = true;
+			document.getElementById("contact-address").disabled = true;
+			document.getElementById("contact-subject").disabled = true;
+			document.getElementById("contact-body").disabled = true;
 			document.getElementById("contact-button").className += " disabled";
 			document.getElementById("contact-text").className += "glyphicon glyphicon-ok";
 			document.getElementById("contact-text").innerHTML = " Sent!";

@@ -9,8 +9,8 @@ module.exports = function(app) {
 	// frontend routes =========================================================
 
 	app.post('/contact', function(req, res) {
-		console.log("contact bitches");
-		console.log(req.body);
+		// console.log("contact bitches");
+		// console.log(req.body);
 
 		mailer.send(req.body);
 
@@ -23,7 +23,7 @@ module.exports = function(app) {
 	})
 
 	app.get('*', function(req, res) {
-		console.log("alsohere");
+		// console.log("alsohere");
 		// res.render('./public/index.html', function(err,html) {
 		// 	res.send(html);
 		// });
