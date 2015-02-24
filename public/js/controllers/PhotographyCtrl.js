@@ -1,7 +1,6 @@
 var PhotographyCtrl = angular.module('PhotographyCtrl', []);
 
 PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchorScroll', '$location', function($scope, $http, $anchorScroll, $location) {
-	
 	$scope.albums = [];
 
 	// sizeNum 2 = thumbnail
@@ -69,9 +68,16 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchor
 	};
 
 
+	// $scope.getjson = function() {
+
+	// 	$http.get('/photography').then(function(res) {
+	// 		console.log(res);
+	// 	})
+	// }
 
 
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
+		// $scope.getjson();
 		$scope.getAlbums(5, $scope.getAlbum);
 	  document.getElementById("transparency").style.backgroundColor = 'rgba(200,200,200,0.14)';
 	});
@@ -101,7 +107,7 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
 			album[key]['thumbnail'] = data.sizes.size[sizeNum-1].source;
 
 		}).error(function(error) {
-			console.log('error');
+			console.log(error);
 		})
 	}
 
@@ -160,6 +166,7 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
     var old = $location.hash();
     $location.hash(id);
     $anchorScroll();
+    
     //reset to old to keep any additional routing logic from kicking in
     $location.hash(old);
 	};

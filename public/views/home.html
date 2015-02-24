@@ -1,4 +1,12 @@
-<div slideshow-directive id="home">
+<div class="hidden-xs" id="home">
 	<button ng-click="decImage()"><span class="glyphicon glyphicon-menu-left"></span></button>
 	<button ng-click="incImage()"><span class="glyphicon glyphicon-menu-right"></span></button>
+</div>
+<div class="visible-xs">
+	 <ul class="nav mobile-home">
+      <li class="row" ng-class="{active:isActive('/resume')}"><a href="/resume">Resume</a></li>
+      <li class="row" ng-class="{active:isActive('/projects')}" ><a href="/projects">Projects</a></li>
+      <li class="row" ng-class="{active:isActive('/photography')}" ><a href="/photography">Photography</a></li>
+      <li class="row" ng-class="{active:isActive('/contact')}" ><a href="/contact">Contact</a></li>
+    </ul>
 </div>

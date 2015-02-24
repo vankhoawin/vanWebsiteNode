@@ -1,10 +1,10 @@
 var mailer = require('./models/mailer');
+var config = require('./config')
 
 module.exports = function(app) {
 
 	app.post('/contact', function(req, res) {
 		mailer.send(req.body);
-		res.sendfile('./public/index.html');
 	})
 
 	app.get('*', function(req, res) {

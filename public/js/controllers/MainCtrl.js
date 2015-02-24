@@ -5,15 +5,34 @@ angular.module('MainCtrl', [])
 
 	$scope.slideshowCurr = 0;
 	$scope.slideshowMax = 10;
+	$scope.imgArray = new Array();
 
 	$scope.decImage = function(index) {
 		$scope.slideshowCurr = ($scope.slideshowCurr <= 0) ? $scope.slideshowMax : ($scope.slideshowCurr-1);
-		document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
+
+		if (typeof $scope.imgArray[$scope.slideshowCurr] === 'undefined') {
+			$scope.imgArray[$scope.slideshowCurr] = new Image();
+			$scope.imgArray[$scope.slideshowCurr].onload = function() {
+				document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
+			}
+
+			$scope.imgArray[$scope.slideshowCurr].src = '../static/back' + $scope.slideshowCurr + '.jpg';
+		}else 
+			document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
 	}
 
 	$scope.incImage = function(index) {
-		$scope.slideshowCurr = ($scope.slideshowCurr >= $scope.slideshowMax) ? 0 : ($scope.slideshowCurr+1);
-		document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
+		$scope.slideshowCurr = ($scope.slideshowCurr >= $scope.slideshowMax) ? 0 : ($scope.slideshowCurr+1);	
+
+		if (typeof $scope.imgArray[$scope.slideshowCurr] === 'undefined') {
+			$scope.imgArray[$scope.slideshowCurr] = new Image();
+			$scope.imgArray[$scope.slideshowCurr].onload = function() {
+				document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
+			}
+
+			$scope.imgArray[$scope.slideshowCurr].src = '../static/back' + $scope.slideshowCurr + '.jpg';
+		}else 
+			document.body.style.backgroundImage = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';		
 	}
 
 	$scope.findBase = function(route) {
@@ -37,7 +56,10 @@ angular.module('MainCtrl', [])
 		var path = $scope.findBase($location.path());
 
 		if (path === '/photography') {
-		  document.body.style.backgroundImage  = "url('../static/photoBG.jpg')";
+		  document.body.style.backgroundImage  = "url('../static/photoBG2.jpg')";
+		  // document.body.style.backgroundImage = "none";
+		  // document.body.style.backgroundColor = "#171717";
+
 		}else {
 			document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
 		  document.body.style.backgroundRepeat = "no-repeat";
