@@ -3,38 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="personal website">
-  <meta name="author" content="Van Nguyen">
-  <base href="/">
+  <meta name="viewport"              content="width=device-width, initial-scale=1">
+  <meta name="description"           content="portfolio: runs on node.js, expressJS, angularJS">
+  <meta name="author"                content="Van Nguyen">
+  <meta name='og:title'              content='Van personal website'>
+  <meta name='og:description'        content="portfolio: runs on node.js, expressJS, angularJS">
+  <meta name='og:site_name'          content='Van Nguyen Website'>
+  <meta name='og:type'               content='website'>
 
+  <base href="/">
   <title ng-controller="TitleController" ng-bind="'Van Nguyen | ' + title"></title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <!-- <script src="libs/bootstrap/dist/css/bootstrap.css"></script> -->
-
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- JS -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
-  <!-- <script src="libs/angular/angular.min.js"></script> -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular-route.min.js"></script>
-  <!-- <script src="libs/angular-route/angular-route.min.js"></script> -->
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <!-- <script src="libs/jquery/dist/jquery.min.js"></script> -->
-
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  <!-- <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script> -->
-
 
 </head>
 
 <body ng-controller="MainController" ng-style="{'background-image':'url({{ slideshowImage }})'}">
-
   <div id="top" class="container">
     <div class="row-fluid">
       <div class="col-sm-4 col-md-3">
@@ -62,13 +48,19 @@
         </div>
       </div>
     </div>
+    
     <!-- ANGULAR DYNAMIC CONTENT -->
     <div class="col-sm-8 col-md-9 main-content fade-in" id="transparency" ng-view></div>
   </div>
 </body>
 
-  <!-- ANGULAR -->
+  <!-- JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.10/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+  <!-- ANGULAR -->
   <script src="js/controllers/MainCtrl.js"></script>
   <script src="js/controllers/HomeCtrl.js"></script>
   <script src="js/controllers/TitleCtrl.js"></script>

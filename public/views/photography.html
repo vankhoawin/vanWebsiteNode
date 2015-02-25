@@ -2,9 +2,6 @@
 <div ng-repeat="album in albums" >
 	<div class="separator-top" ng-if="$first">
 	  <div class="col-xs-12 col-md-6 col-lg-5" id="photography"><a href="photography/{{ album.id }}"><img src="{{ album.thumbnail }}" data-alt=""></img></a></div>
-	  <!-- <div class="defer-image image-ratio:16x9">
-		  <div data-src="{{ album.thumbnail }}" data-alt="{{ album.title._content }}"></div>
-		</div> -->
 	  <div class="col-xs-12 col-md-6 col-lg-7">
 	  	<a href="/photography/{{ album.id }}">{{ album.title._content }}</a>
 	  	<i>{{ album.photos }} {{ album.photos == 1 ? "photo" : "photos" }}</i>
@@ -13,9 +10,6 @@
 	</div>
 	<div class="separator" ng-if="!$first">
 	  <div class="col-xs-12 col-md-6 col-lg-5" id="photography"><a href="photography/{{ album.id }}"><img src="{{ album.thumbnail }}" data-alt=""></img></a></div>
-	  <!-- <div class="defer-image image-ratio:16x9">
-		  <div data-src="{{ album.thumbnail }}" data-alt="{{ album.title._content }}"></div>
-		</div> -->
 	  <div class="col-xs-12 col-md-6 col-lg-7">
 	  	<a href="/photography/{{ album.id }}">{{ album.title._content }}</a>
 	  	<i>{{ album.photos }} {{ album.photos == 1 ? "photo" : "photos" }}</i>

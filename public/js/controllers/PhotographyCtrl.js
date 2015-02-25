@@ -3,6 +3,7 @@ var PhotographyCtrl = angular.module('PhotographyCtrl', []);
 PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchorScroll', '$location', function($scope, $http, $anchorScroll, $location) {
 	$scope.albums = [];
 
+
 	// sizeNum 2 = thumbnail
 	$scope.getPhoto = function(albums, photoId, sizeNum, key) {
 		$http({
@@ -24,6 +25,7 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchor
 			console.log('error');
 		})
 	}
+
 
 	$scope.getAlbum = function(data, sizeNum, callback) {
 		for (var key in data) {
@@ -59,6 +61,7 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchor
 		})
 	}
 
+
 	$scope.scrollTo = function(id) {
     var old = $location.hash();
     $location.hash(id);
@@ -66,14 +69,6 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchor
     //reset to old to keep any additional routing logic from kicking in
     $location.hash(old);
 	};
-
-
-	// $scope.getjson = function() {
-
-	// 	$http.get('/photography').then(function(res) {
-	// 		console.log(res);
-	// 	})
-	// }
 
 
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
@@ -85,7 +80,6 @@ PhotographyCtrl.controller('PhotographyController', ['$scope', '$http', '$anchor
 
 
 PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$anchorScroll', '$location', '$routeParams', function($scope, $http, $anchorScroll, $location, $routeParams) {
-
 	$scope.album = [];
 	$scope.albumInfo = '';
 
@@ -110,6 +104,7 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
 			console.log(error);
 		})
 	}
+
 
 	$scope.getAlbumPhotos = function(albumId, sizeNum, callback) {
 		$http({
@@ -139,6 +134,7 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
 			console.log(error);
 		})
 	}
+
 
 	$scope.getAlbumTitle = function(albumId) {
 		$http({
@@ -172,12 +168,10 @@ PhotographyCtrl.controller('PhotographyAlbumController', ['$scope', '$http', '$a
 	};
 
 
-
 	$scope.$on('$routeChangeSuccess', function(event, current, previous) {
 		$scope.getAlbumPhotos($routeParams.albumId, 9, $scope.getAlbumPhoto);
 		$scope.getAlbumTitle($routeParams.albumId);
 	  document.getElementById("transparency").style.backgroundColor = 'rgba(200,200,200,0.14)';
 		
 	});
-
 }]);

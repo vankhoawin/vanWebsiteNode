@@ -37,6 +37,7 @@
 .icon-linkedin:before {
   content: "\f0e1";
 }
+
 .icon-instagram:before {
   content: "\f16d";
 }
@@ -49,11 +50,8 @@
 
 body {
   background-image: url('../static/back0.jpg');
-
-
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /*background-position: center;*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,7 +61,6 @@ body {
   transition: background-image 0.8s ease 0.1s;
   overflow-x:hidden;
   overflow-y:scroll;
-
 }
 
 @media (min-width: 1250px) {
@@ -71,8 +68,6 @@ body {
     width: 1250px;
   }
 }
-
-
 
 @media (max-width: 767px) {
   .navbar-default{
@@ -82,9 +77,7 @@ body {
   .main-content {
     height: 550px;
   }
-
 }
-
 
 @media (max-width: 991px) {
   .separator {
@@ -106,9 +99,6 @@ body {
 
   .mobile-home {
     text-align: center;
-    /*background-color: rgba(255,255,255,0.8);*/
-    /*border-color: #e7e7e7;*/
-    /*border: 1px solid transparent;*/
   }
 
   .mobile-home li {
@@ -116,7 +106,6 @@ body {
     background-color: rgba(255,255,255,0.5);
     padding: 3% 0%;
   }
-
 }
 
 @media (min-width: 768px) {
@@ -129,7 +118,6 @@ body {
     overflow-y: auto;
   }
 
-  
   .sidebar-nav .navbar .navbar-collapse {
     padding: 0;
     max-height: none;
@@ -207,7 +195,6 @@ body {
 .main-content {
   padding: 12px;
   background-color: rgba(0,0,0,0.7);
-  /*max-height: 40em;*/
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -231,6 +218,10 @@ body {
   border: 1px solid rgba(0,0,0,0.2) !important;
 }
 
+.separator {
+  border-top: 1px solid rgba(255,255,255,0.6);
+}
+
 .separator-top, .separator {
   padding: 20px 0px;
   height: 270px;
@@ -246,13 +237,8 @@ body {
   margin-left: 10px;
 }
 
-
 .separator-top div p , .separator div p {
   margin-top: 8px;
-}
-
-.separator {
-  border-top: 1px solid rgba(255,255,255,0.6);
 }
 
 .separator-top a, .separator-top a img,  
@@ -269,7 +255,6 @@ input, textarea, button {
 #social a {
   padding: 0em 0.2em;
 }
-
 
 .work-history div {
   margin-bottom: 25px;
@@ -305,11 +290,6 @@ input, textarea, button {
   margin-bottom: 5px;
 }
 
-
-.photography-album {
-
-}
-
 .photography-album a {
   color: #5bc0de;
 }
@@ -324,7 +304,6 @@ input, textarea, button {
 }
 
 .photography-album div a {
-
   margin-bottom: 30px;
 }
 
@@ -338,7 +317,6 @@ input, textarea, button {
 
 #photography {
   height:230px;
-  /*width: 300px;*/
   overflow: hidden;
 }
 
@@ -352,35 +330,33 @@ input, textarea, button {
   box-shadow: inset 0 1px 5px rgba(0,0,0,.075),0 0 25px rgba(103,175,233,.9) !important;
 }
  
-
 .main-content::-webkit-scrollbar {
   width: 12px;
 }
 
-
-
 img.fader {
   border-radius: 5px 5px 5px 5px ;
-  display: none ;
-  height: 400px ;
-  left: 0px ;
-  position: absolute ;
-  top: 0px ;
-  width: 400px ;
-  z-index: 2 ;
+  display: none;
+  height: 400px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 400px;
+  z-index: 2;
 }
 
 img.fader.show {
-  display: block ;
-  transition: opacity 250ms ease ;
+  display: block;
+  transition: opacity 250ms ease;
 }
 
 img.fader.fadeOut {
-  opacity: 0 ;
+  opacity: 0;
 }
+
 img.image {
-  border-radius: 5px 5px 5px 5px ;
-  display: block ;
-  height: 400px ;
-  width: 400px ;
+  border-radius: 5px 5px 5px 5px;
+  display: block;
+  height: 400px;
+  width: 400px;
 }

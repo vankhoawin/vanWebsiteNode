@@ -57,9 +57,6 @@ angular.module('MainCtrl', [])
 
 		if (path === '/photography') {
 		  document.body.style.backgroundImage  = "url('../static/photoBG2.jpg')";
-		  // document.body.style.backgroundImage = "none";
-		  // document.body.style.backgroundColor = "#171717";
-
 		}else {
 			document.body.style.backgroundImage  = 'url(../static/back' + $scope.slideshowCurr + '.jpg)';
 		  document.body.style.backgroundRepeat = "no-repeat";

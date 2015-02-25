@@ -7,10 +7,10 @@ angular.module('ContactCtrl', []).controller('ContactController', ['$scope', '$h
 
 			var mail = {
 		    from: user.name + ' <' + user.address + '>', // sender address
-		    to: 'vnguyen94@gmail.com', // list of receivers
-		    subject: user.subject, // Subject line
-		    text: user.body, // plaintext body
-		    html: '<b>' + user.body + '</b>' // html body
+		    to: 'vnguyen94@gmail.com', 									 // list of receivers
+		    subject: user.subject, 											 // Subject line
+		    text: user.body, 														 // plaintext body
+		    html: '<b>' + user.body + '</b>' 						 // html body
 			};
 
 			var res = $http.post('/contact', mail);
@@ -24,13 +24,13 @@ angular.module('ContactCtrl', []).controller('ContactController', ['$scope', '$h
 			});
 
 
-			document.getElementById("contact-name").disabled = true;
+			document.getElementById("contact-name").disabled 		= true;
 			document.getElementById("contact-address").disabled = true;
 			document.getElementById("contact-subject").disabled = true;
-			document.getElementById("contact-body").disabled = true;
+			document.getElementById("contact-body").disabled 		= true;
 			document.getElementById("contact-button").className += " disabled";
-			document.getElementById("contact-text").className += "glyphicon glyphicon-ok";
-			document.getElementById("contact-text").innerHTML = " Sent!";
+			document.getElementById("contact-text").className 	+= "glyphicon glyphicon-ok";
+			document.getElementById("contact-text").innerHTML 	= " Sent!";
 			
 		}
 	}
