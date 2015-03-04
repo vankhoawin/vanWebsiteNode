@@ -1,6 +1,6 @@
 // modules =================================================
-var express        = require('express');
-var app            = express();
+var express = require('express');
+var app     = express();
 
 // configuration ===========================================
 var config = require('./app/config');
