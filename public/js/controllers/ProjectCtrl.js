@@ -2,6 +2,13 @@ angular.module('ProjectCtrl', []).controller('ProjectController', function($scop
 
 	$scope.projects = [
 		{
+			'title'  			: 'Hackaday (2015)',
+			'image'  			: '../static/projects/hackaday.jpg',
+			'source' 			: 'https://hackaday.io/',
+			'github' 			: '',
+			'description' : 'Contribute client-side and server-side JavaScript as well as design for Hackaday.io – a platform for users to view, share, and collaborate on hardware hacks.'
+		},
+		{
 			'title'  			: 'Personal Website (2015)',
 			'image'  			: '../static/projects/website3.jpg',
 			'source' 			: '',
